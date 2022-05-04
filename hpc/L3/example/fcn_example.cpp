@@ -83,6 +83,8 @@ bool compareFCN(float* c, float* goldenC, float p_TolRel = 1e-3, float p_TolAbs 
 }
 
 int main(int argc, char** argv) {
+    //skip check arguments (revised by PC)
+    /*
     if (argc < 2) {
         cerr << " usage: \n"
              << " fcn_test.exe fcn.xclbin 1\n"
@@ -97,7 +99,7 @@ int main(int argc, char** argv) {
         cout << "read custom number of kernels\n";
         l_numKernel = stoi(argv[l_argIdx++]);
     }
-
+*/
     bool check = xfhpcCreate(l_xclbinFile.c_str(), l_numKernel);
     if (!check) {
         cout << "Create Handle failed. \n";
